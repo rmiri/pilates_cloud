@@ -17,6 +17,8 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 gem 'devise'
 gem 'pundit'
 
+gem 'pry', '~> 0.15.0'
+
 group :development, :test do
   gem 'rspec-rails', '~> 8.0.0'
 

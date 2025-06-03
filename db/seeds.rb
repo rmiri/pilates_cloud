@@ -9,3 +9,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+User.delete_all
+
+['platform_admin', 'studio_admin', 'instructor', 'member'].each do |user_role|
+    User.create!(role: user_role, email: "#{user_role}@email.com", password:"qwerty")
+end

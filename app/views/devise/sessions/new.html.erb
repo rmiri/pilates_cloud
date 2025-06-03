@@ -1,0 +1,24 @@
+<h2>Log In to PilatesFlow</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div>
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <div>
+    <%= f.check_box :remember_me %>
+    <%= f.label :remember_me %>
+  </div>
+
+  <%= f.submit "Log in" %>
+<% end %>
+
+<p>New here? <%= link_to "Sign up", new_user_registration_path %></p>
